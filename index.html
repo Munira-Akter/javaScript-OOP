@@ -93,6 +93,14 @@ function one(name){
     }
 }
 
+// put some method in one prototype
+
+one.prototype = {
+    code : function(){
+        return `I love coding`;
+    }
+}
+
 function two(name){ // pass one class argument
     // extends class one
     one.call(this);
@@ -100,8 +108,15 @@ function two(name){ // pass one class argument
     this.name = name;
 }
 
+//  get access of one prototype in two class
+
+two.prototype = Object.create(one.prototype);
+
 // create instance
 let twos = new two("Munira"); //pass one class name parameter
+
+// get output of one prototype in two prototype
+console.log(twos.code());
 
 console.log(twos.info())
 
