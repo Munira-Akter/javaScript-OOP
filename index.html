@@ -53,6 +53,35 @@ let student = new Student;
 console.log(student.stu(10));
 
 
+// Construtor function multiple method in prototype
+
+function Multi(games){
+    this.name = "munira";
+    this.age = 50
+}
+
+Multi.prototype = {
+    info : function (info){
+        return `I am ${info}`;
+    },
+
+    devs : function(){
+        return `I am ${this.name}`;
+    },
+
+    game : function(){
+        return `I am ${games}`;
+    }
+}
+
+let multi = new Multi();
+let multi1 = new Multi("game");
+
+console.log(multi.info('information'));
+console.log(multi.devs());
+console.log(multi1.game());
+
+
 
 
 
