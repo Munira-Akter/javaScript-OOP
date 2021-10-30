@@ -79,7 +79,31 @@ let multi1 = new Multi("game");
 
 console.log(multi.info('information'));
 console.log(multi.devs());
-console.log(multi1.game());
+// console.log(multi1.game());
+
+
+
+// Extends one class to another class
+
+function one(name){
+    this.name = name;
+
+    this.info = function(){
+        return `I am  ${this.name}`;
+    }
+}
+
+function two(name){ // pass one class argument
+    // extends class one
+    one.call(this);
+    // put one class dynamic property
+    this.name = name;
+}
+
+// create instance
+let twos = new two("Munira"); //pass one class name parameter
+
+console.log(twos.info())
 
 
 
