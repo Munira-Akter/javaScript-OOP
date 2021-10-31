@@ -121,6 +121,24 @@ console.log(twos.code());
 console.log(twos.info())
 
 
+// Mini project by vanila javacsript OOP Concept
+
+let result = function (name,roll,mark){
+    this.resultInfo = function(){
+        if(mark > 32 && mark <= 100){
+            return `Hello ${name}, you are pass the exam`;
+        }else if(mark > 100){
+            return `Hello ${name}, your result is invalid`;
+        }else{
+            return `Hello ${name}, your result is failed`;
+        }
+    }
+}
+
+let results = new result('Munira' , '012' , 89)
+console.log(results.resultInfo())
+
+
 
 
 
