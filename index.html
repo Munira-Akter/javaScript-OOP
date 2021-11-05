@@ -236,6 +236,15 @@ let emailRegx = /^[a-z0-9.]*@[?=.*?a-z]{4,}\.[?=.*?a-z]{2,}/;
 console.log(emailRegx.test(email))
 
 
+// password validation using Regular Expression
+// munira.web123@gmail.com
+let password = 'Munira1.';
+let passwordRegx = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+":><?/.,';"]){6,8}/;
+console.log(passwordRegx.test(password))
+
+
+
+
 
 
 
