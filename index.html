@@ -156,7 +156,7 @@ class Staf{
 
     // prototype method declaration
 
-    age(){
+    ages(){
         return `this is my age ${this.age}`;
     }
 
@@ -167,6 +167,30 @@ class Staf{
 
 let staff = new Staf('munira',20);
 console.log(staff)
+
+
+// create inheritance 
+class author extends Staf{
+    constructor (name,age,skill){
+        super(name,age);
+        this.name = name;
+        this.age = age;
+        this.skill = skill
+
+        this.info = function(){
+            return `hi i am author info`;
+        }
+    }
+
+    devs(){
+        return `i am devs from author`;
+    }
+
+   
+}
+
+let auth = new author('munira',34,'MERN');
+console.log(auth.ages())
 
 
 
