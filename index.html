@@ -190,9 +190,46 @@ class author extends Staf{
 }
 
 let auth = new author('munira',34,'MERN');
-console.log(auth.ages())
+console.log(auth)
 
 
+
+
+// regular expression
+
+// regular expresion has 4 modifier / , /i , /g , /m
+// regular expression -	Meta Character  ^ , $ , () , | , . , * , [a-zA-Z0-9] , [^!@#$%^&*()_+}{":><?"}] , {5,24} , tomi?ami?blank , \w ,\W , \s , \S , \d , \D , + , 
+
+let str = 'I am Munira Akte';
+
+let regx = /^i....Munira.[a-zA-Z]*r$/i;
+
+console.log(regx.test(str))
+
+
+// username regular expression
+
+// _munira1
+
+let username = '_munira1';
+
+let userRegx = /^_[a-z0-9]{5,8}[^A-Z!@#$%^&*()_+":><?/.,';"]/i;
+
+console.log(userRegx.test(username))
+
+
+// Bangladeshi phone number validation
+
+// +880 , 01 *********
+
+let phoneNumber = '+8801881959920';
+
+let phoneRegx = /^(\+880|01)[0-9]{9}/;
+
+console.log(phoneRegx.test(phoneNumber));
+
+
+// 
 
 
 
