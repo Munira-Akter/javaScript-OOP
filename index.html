@@ -140,6 +140,35 @@ console.log(results.resultInfo())
 
 
 
+/**
+ * ES6 OOP 
+**/
+
+class Staf{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+
+        this.info = function(){
+            return `this is my name ${this.name}`;
+        }
+    }
+
+    // prototype method declaration
+
+    age(){
+        return `this is my age ${this.age}`;
+    }
+
+
+};
+
+// create instance
+
+let staff = new Staf('munira',20);
+console.log(staff)
+
+
 
 
 
